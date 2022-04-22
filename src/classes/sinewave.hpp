@@ -10,7 +10,6 @@
 #define sinewave_hpp
 
 #include <stdio.h>
-
 #include "ofMain.h"
 
 class sinewave : public ofBaseApp {
@@ -19,7 +18,12 @@ public:
     void update();
     void draw();
 private:
-
+    ofEasyCam cam;
+    ofMesh mesh;
+    ofPlanePrimitive plane;
+    vector<glm::vec3> vertices;
+    int size;
+    int step;
 };
 
 #endif /* sinewave_hpp */
